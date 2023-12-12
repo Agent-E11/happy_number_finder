@@ -1,5 +1,6 @@
 use std::io;
 use std::time::Instant;
+use std::collections::BTreeSet;
 
 fn main() {
     let mut buf = String::new();
@@ -34,7 +35,7 @@ fn main() {
 
 fn is_happy(usr_num: u32) -> bool {
     let mut num = usr_num;
-    let mut history: Vec<u32> = Vec::new();
+    let mut history: BTreeSet<u32> = BTreeSet::new();
 
     loop {
         let new_num: u32 = num.to_string().chars()
@@ -43,11 +44,11 @@ fn is_happy(usr_num: u32) -> bool {
 
         if new_num == 1 {
             break true;
-        } else if history.binary_search(&new_num).is_ok() {
+        } else if history.contains(&new_num) {
             break false;
         } else {
             num = new_num;
-            history.push(new_num);
+            history.insert(new_num);
         }
     }
 }
