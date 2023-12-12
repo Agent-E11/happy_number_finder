@@ -16,6 +16,7 @@ If the sequence ends in 1, then the number is "happy". If the sequence gets stuc
 
 ## Performance tests
 
-| Version | Time per 1,000,000 numbers |
-| :-----: | -----------------------: |
-| 0.1.0   | 24,722,466 μs ≈ 24.7 s   |
+| Version | Change              | Avg. time per 1 mil. numbers | Round 1 | Round 2 | Round 3 | Round 4 | Round 5 |
+| :-----: | ------------------- | ---------------------------: | ------- | ------- | ------- | ------- | ------- |
+| 0.1.0   | Initial             | \_ μs ≈ \_ s                 |  |  |  |  |  |
+| 0.1.1   | Added binary search | 6,671,577 μs ≈ 6.67 s        | 6471872 | 6832003 | 6626129 | 6572571 | 6855307 |

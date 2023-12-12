@@ -43,7 +43,7 @@ fn is_happy(usr_num: u32) -> bool {
 
         if new_num == 1 {
             break true;
-        } else if history.contains(&new_num) {
+        } else if history.binary_search(&new_num).is_ok() {
             break false;
         } else {
             num = new_num;
