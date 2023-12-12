@@ -13,3 +13,9 @@ To determine if a number is "happy" or not:
 ```
 
 If the sequence ends in 1, then the number is "happy". If the sequence gets stuck in any other cycle, then it is "unhappy".
+
+## Performance tests
+
+| Version | Time per 1,000,000 numbers |
+| :-----: | -----------------------: |
+| 0.1.0   | 24,722,466 μs ≈ 24.7 s   |

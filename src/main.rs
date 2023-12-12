@@ -28,8 +28,8 @@ fn main() {
         curr_num += 1;
     }
 
-    println!("Happy numbers: {:?}", happy_nums);
-    println!("Time elapsed: {}", start.elapsed().as_micros());
+    println!("Final happy number: {}", happy_nums.last().unwrap());
+    println!("Time elapsed: {}μs", start.elapsed().as_micros());
 }
 
 fn is_happy(usr_num: u32) -> bool {
